@@ -17,10 +17,30 @@ repositories {
     mavenCentral()
 }
 
+ext {
+    jsonwebtokenVersion = '2.12.6'
+    transmittableThreadLocalVersion = '2.14.5'
+}
+
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
+    implementation 'org.springframework.cloud:spring-cloud-starter-loadbalancer'
+    implementation 'org.springframework:spring-context-support'
+    implementation 'org.springframework.boot:spring-boot-starter-aop'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    implementation 'com.mysql:mysql-connector-j:9.0.0'
+    implementation 'org.apache.commons:commons-lang3'
+    implementation 'org.apache.commons:commons-collections'
+    implementation 'com.fasterxml.jackson.core:jackson-databind'
+    implementation 'com.alibaba:fastjson2:fastjson2'
+    implementation "com.alibaba:transmittable-thread-local:${transmittableThreadLocalVersion}"
+    implementation "io.jsonwebtoken:jjwt-api:${jsonwebtokenVersion}"
+    implementation "io.jsonwebtoken:jjwt-impl:${jsonwebtokenVersion}"
+    implementation "io.jsonwebtoken:jjwt-jackson:${jsonwebtokenVersion}"
+    implementation 'org.projectlombok:lombok'
 }
 
 tasks.named('test') {
