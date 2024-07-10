@@ -1,0 +1,6 @@
+include 'deli-base'
+include 'deli-auth'
+include 'deli-gateway'
+include 'deli-modules'
+include 'deli-api'
+include 'deli-monitor'
